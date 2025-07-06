@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex flex-col items-center space-y-1 p-2 rounded-lg cursor-pointer transition-all hover:brightness-110;
+  }
+
+  .sidebar-item.active {
+    @apply bg-[#4A50FF];
+  }
+
+  .kpi-card {
+    @apply bg-white border border-gray-200 rounded-lg p-4;
+  }
+
+  .insight-card {
+    @apply bg-white rounded-xl border border-gray-200 p-4 flex;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
